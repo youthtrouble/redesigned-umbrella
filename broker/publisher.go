@@ -15,7 +15,7 @@ type PublisherQueueConfig struct {
 // Re-usable function to create a new queue
 func NewQueue(rabbitMQChannel *amqp.Channel, name string) (*PublisherQueueConfig, error) {
 	amqpQueue, err := rabbitMQChannel.QueueDeclare(
-		"name",
+		name,
 		true,
 		false,
 		false,

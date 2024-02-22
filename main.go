@@ -13,7 +13,7 @@ func main() {
 		log.Fatalf("Error creating RabbitMQ config: %s", err)
 	}
 
-	_, err = broker.NewQueue(rabbitMQConfig.QueueChannel) // not ready to be used
+	_, err = broker.NewQueue(rabbitMQConfig.QueueChannel, "testQueue") // not ready to be used
 	if err != nil {
 		log.Fatalf("Error creating main queue: %s", err)
 	}
